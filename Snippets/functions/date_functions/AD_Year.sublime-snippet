@@ -1,0 +1,6 @@
+<snippet>
+	<description>AD_Year - возвращает номер года из даты</description>
+	<content><![CDATA[AD_Year(${1:someDate})]]></content>
+	<tabTrigger>AD_Year</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

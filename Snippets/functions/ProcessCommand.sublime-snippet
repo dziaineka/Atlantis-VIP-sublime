@@ -1,0 +1,6 @@
+<snippet>
+	<description>Функция НЕМЕДЛЕННО вызывает главный обработчик событий интерфейса</description>
+	<content><![CDATA[ProcessCommand(${1:cmValue})]]></content>
+	<tabTrigger>ProcessCommand</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

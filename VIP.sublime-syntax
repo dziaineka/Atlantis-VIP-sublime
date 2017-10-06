@@ -1,0 +1,93 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: VIP
+file_extensions:
+  - vip
+  - vpp
+  - vih
+  - vil
+  - obj
+  - mnu
+  - inc
+  - gcd
+scope: source.vip
+
+variables:
+  identifier: '\b[[:alpha:]_][[:alnum:]_]*\b'
+
+contexts:
+  main:
+    - match: \b(?i:(_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|and|array|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|component|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|doc|ifdef|endif|define|ifndef|escClose|eventNavigation|event|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|not|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|or|out|panel|DataStream|parameters|pickButton|nopickButton|private|property|protected|protect|prototype|public|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|showat|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|var|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write|include|declare|xor))\b
+      scope: keyword.control.vip
+
+    - match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)(\(.*?\))?;\s*(?=(?i:attribute|forward|external))
+      scope: meta.function.prototype.vip
+      captures:
+        1: storage.type.prototype.vip
+        2: entity.name.function.prototype.vip
+
+    - match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)
+      scope: meta.function.vip
+      captures:
+        1: storage.type.function.vip
+        2: entity.name.function.vip
+
+    - match: '\b(true|false|(0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(h|b|H|B|L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\b'
+      scope: constant.numeric.vip
+
+    - match: '(^[ \t]+)?(//)'
+      captures:
+        1: punctuation.whitespace.comment.leading.vip
+        2: punctuation.definition.comment.vip
+      push:
+        - meta_scope: comment.line.double-slash.vip.two
+        - match: \n
+          pop: true
+
+    - match: \/\*
+      captures:
+        0: punctuation.definition.comment.vip
+      push:
+        - meta_scope: comment.block.vip.one
+        - match: \*\/
+          captures:
+            0: punctuation.definition.comment.vip
+          pop: true
+
+    - match: '"'
+      comment: Double quoted strings are an extension and (generally) support C-style escape sequences.
+      captures:
+        0: punctuation.definition.string.begin.vip
+      push:
+        - meta_scope: string.quoted.double.vip
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.vip
+          pop: true
+        - match: \\.
+          scope: constant.character.escape.vip
+
+    - match: "'"
+      captures:
+        0: punctuation.definition.string.begin.vip
+      push:
+        - meta_scope: string.quoted.single.vip
+        - match: "''"
+          scope: constant.character.escape.apostrophe.vip
+        - match: "'"
+          captures:
+            0: punctuation.definition.string.end.vip
+          pop: true
+
+    - match: "<<"
+      captures:
+        0: punctuation.definition.string.begin.vip
+      push:
+        - meta_scope: string.quoted.single.vip
+        - match: "<<>>"
+          scope: constant.character.escape.apostrophe.vip
+        - match: ">>"
+          captures:
+            0: punctuation.definition.string.end.vip
+          pop: true

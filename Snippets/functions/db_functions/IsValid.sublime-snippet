@@ -1,0 +1,6 @@
+<snippet>
+	<description>IsValid - проверка на существование записи в логической таблице</description>
+	<content><![CDATA[IsValid(#${1:TABLENAME})]]></content>
+	<tabTrigger>IsValid</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

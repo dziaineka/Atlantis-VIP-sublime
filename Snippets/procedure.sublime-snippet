@@ -1,0 +1,9 @@
+<snippet>
+	<description>procedure</description>
+	<content><![CDATA[procedure ${1:Name};
+{
+  ${0:/* code */}
+}]]></content>
+	<tabTrigger>procedure</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

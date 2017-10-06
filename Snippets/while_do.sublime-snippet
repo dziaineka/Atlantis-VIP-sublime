@@ -1,0 +1,9 @@
+<snippet>
+	<description>while do</description>
+	<content><![CDATA[while ${1:some_condition} do
+{
+  ${0:/* code */}
+}]]></content>
+	<tabTrigger>while</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

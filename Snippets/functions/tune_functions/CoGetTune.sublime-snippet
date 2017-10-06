@@ -1,0 +1,6 @@
+<snippet>
+	<description>CoGetTune</description>
+	<content><![CDATA[CoGetTune('${1:someTune}')]]></content>
+	<tabTrigger>CoGetTune</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

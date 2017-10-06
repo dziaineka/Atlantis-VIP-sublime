@@ -1,0 +1,16 @@
+<snippet>
+	<description>case condition</description>
+	<content><![CDATA[case ${1:variable} of
+  ${2:const1}:
+  {
+    ${3:/* code */}
+  }
+
+  else
+  {
+    ${0:/* code */}
+  }
+end;]]></content>
+	<tabTrigger>case</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<description>Loop table records</description>
+	<content><![CDATA[_loop ${1:TABLENAME}
+{
+  ${0:/* code */}
+}]]></content>
+	<tabTrigger>_loop</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

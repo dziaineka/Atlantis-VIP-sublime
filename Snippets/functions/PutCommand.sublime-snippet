@@ -1,0 +1,6 @@
+<snippet>
+    <description>Функция кладет событие в очередь для обработчика событий текущего окна</description>
+    <content><![CDATA[PutCommand(${1:cmValue})]]></content>
+    <tabTrigger>PutCommand</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

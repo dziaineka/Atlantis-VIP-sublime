@@ -1,0 +1,6 @@
+<snippet>
+	<description>Перевод всех символов строки к строчным буквам</description>
+	<content><![CDATA[LoCase(${1:someString})]]></content>
+	<tabTrigger>LoCase</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

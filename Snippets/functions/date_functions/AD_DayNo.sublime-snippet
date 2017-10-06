@@ -1,0 +1,6 @@
+<snippet>
+	<description>AD_DayNo - возвращает номер дня из даты</description>
+	<content><![CDATA[AD_DayNo(${1:someDate})]]></content>
+	<tabTrigger>AD_DayNo</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

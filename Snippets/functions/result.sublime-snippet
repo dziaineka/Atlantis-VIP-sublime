@@ -1,0 +1,6 @@
+<snippet>
+	<description>возвращаемое значение функции</description>
+	<content><![CDATA[result := ${1:someValue};]]></content>
+	<tabTrigger>result</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<description>function</description>
+	<content><![CDATA[function ${1:Name}: ${2:returnType};
+{
+  result := ${3:/* value */};
+
+  ${4:/* code */}
+}]]></content>
+	<tabTrigger>function</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

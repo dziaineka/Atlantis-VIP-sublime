@@ -1,0 +1,6 @@
+<snippet>
+	<description>AD_Month - возвращает номер месяца из даты</description>
+	<content><![CDATA[AD_Month(${1:someDate})]]></content>
+	<tabTrigger>AD_Month</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

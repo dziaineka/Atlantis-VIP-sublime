@@ -1,0 +1,6 @@
+<snippet>
+	<description>Message</description>
+	<content><![CDATA[Message(${1:someString})]]></content>
+	<tabTrigger>Message</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

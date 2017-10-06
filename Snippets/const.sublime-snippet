@@ -1,0 +1,9 @@
+<snippet>
+    <description>const block</description>
+    <content><![CDATA[const
+  ${2:code}
+end;]]>
+    </content>
+    <tabTrigger>const</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

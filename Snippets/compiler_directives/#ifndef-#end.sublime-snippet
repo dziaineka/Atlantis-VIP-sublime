@@ -1,0 +1,9 @@
+<snippet>
+    <description>#ifndef … #end</description>
+    <content><![CDATA[#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#else ${1:SYMBOL}
+${2:value}
+#end]]></content>
+    <tabTrigger>ifndef</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

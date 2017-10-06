@@ -1,0 +1,9 @@
+<snippet>
+	<description>define new record</description>
+	<content><![CDATA[record
+  ${1:someName}: ${0:someType};
+end;
+]]></content>
+	<tabTrigger>record</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

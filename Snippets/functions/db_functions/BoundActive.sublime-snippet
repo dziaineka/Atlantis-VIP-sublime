@@ -1,0 +1,6 @@
+<snippet>
+	<description>Функция определяет, активно ли заданное ограничение boundId</description>
+	<content><![CDATA[BoundActive(tb${1:BoundId})]]></content>
+	<tabTrigger>BoundActive</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+	<description>GetMarker(markers: longInt; indexNo: longInt; item: anyType): boolean;</description>
+	<content><![CDATA[GetMarker(${1:someMarker}, ${2:markerIndex}, ${3:returnedItem})]]></content>
+	<tabTrigger>GetMarker</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

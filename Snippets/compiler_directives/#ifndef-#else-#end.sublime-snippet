@@ -1,0 +1,11 @@
+<snippet>
+	<description>#ifndef … #else … #end</description>
+	<content><![CDATA[#ifndef ${1:Gal9_1}
+${2:code}
+#else
+${3:code}
+#end]]>
+    </content>
+	<tabTrigger>ifndef</tabTrigger>
+	<scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
