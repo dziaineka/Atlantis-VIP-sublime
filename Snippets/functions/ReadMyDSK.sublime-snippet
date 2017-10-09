@@ -1,0 +1,6 @@
+<snippet>
+	<description>ReadMyDSK(variable: anyType; name: string; var dateChanged: boolean): boolean;</description>
+	<content><![CDATA[ReadMyDSK(${1:variable}, '${1:variable}_${TM_FILENAME/\..+$//}', true)]]></content>
+	<tabTrigger>ReadMyDSK</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

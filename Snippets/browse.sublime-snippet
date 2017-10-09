@@ -1,0 +1,10 @@
+<snippet>
+	<description>browse - табличный UI</description>
+	<content><![CDATA[browse ${1:BrowseName};
+  fields
+    ${2:// fields here}
+end; // browse ${1:BrowseName}
+]]></content>
+	<tabTrigger>browse</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

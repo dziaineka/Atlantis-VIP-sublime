@@ -1,0 +1,21 @@
+<snippet>
+    <description>screen - анкетный UI</description>
+    <content><![CDATA[screen ${1:ScreenName};
+  fields
+    ${2:// fields here}
+
+  buttons
+    ${3:// buttons here}
+
+<<
+
+  `Поле`.@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    <.Продолжить.>      <.   Отмена   .>
+
+>>
+end; // screen ${1:ScreenName}
+]]></content>
+    <tabTrigger>screen</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

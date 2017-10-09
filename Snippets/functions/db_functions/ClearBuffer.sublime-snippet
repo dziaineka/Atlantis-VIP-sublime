@@ -1,0 +1,6 @@
+<snippet>
+    <description>ClearBuffer - очистить буфер загруженной из таблицы записи</description>
+    <content><![CDATA[ClearBuffer(#${1:TABLENAME})]]></content>
+    <tabTrigger>ClearBuffer</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

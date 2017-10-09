@@ -1,0 +1,14 @@
+<snippet>
+	<description>table struct - таблица в памяти</description>
+	<content><![CDATA[table struct ${1:TABLENAME}
+(
+  ${2:FIELD1}: ${3:comp},
+  ${4:FIELD2}: ${5:string}
+)
+with index
+(
+  IDX0 = ${2:FIELD1}
+);]]></content>
+	<tabTrigger>table struct</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
