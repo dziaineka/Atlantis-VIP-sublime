@@ -18,7 +18,10 @@ variables:
 
 contexts:
   main:
-    - match: \b(?i:(_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|and|array|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|component|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|doc|ifdef|endif|define|ifndef|escClose|eventNavigation|event|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|not|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|or|out|panel|DataStream|parameters|pickButton|nopickButton|private|property|protected|protect|prototype|public|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|showat|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|var|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write|include|declare|xor))\b
+    - match: \b(?i:(keepqueue|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|array|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|component|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|event|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|private|property|protected|protect|prototype|public|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|showat|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|var|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
+      scope: keyword.control.vip
+
+    - match: ^\s*(#\s*(include|declare|doc|end|ifdef|endif|define|ifndef))\b
       scope: keyword.control.vip
 
     - match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)(\(.*?\))?;\s*(?=(?i:attribute|forward|external))
@@ -35,15 +38,6 @@ contexts:
 
     - match: '\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(h|b|H|B|L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\b'
       scope: constant.numeric.vip
-
-    - match: '\b(true|false|tsOk|cmYes|YesNo|Confirmation|Warning|OkButton)'
-      scope: constant.language.vip
-
-    - match: '\b(ExprFieldValue)'
-      scope: variable.language.vip
-
-    - match: '\b((string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant)+[^(])'
-      scope: storage.type.vip
 
     - match: '(^[ \t]+)?(//)'
       captures:
@@ -100,3 +94,27 @@ contexts:
           captures:
             0: punctuation.definition.string.end.vip
           pop: true
+
+    - match: '(\:\=|\+\=|\-\=|\*\=|\/\=|\|\=|\&\=)'
+      scope: keyword.operator.assignment.vip
+
+    - match: (\+|\-|/|\*)
+      scope: keyword.operator.arithmetic.vip
+
+    - match: '\b(true|false|tsOk|cmYes|YesNo|Confirmation|Warning|OkButton)'
+      scope: constant.language.vip
+
+    - match: '\b(ExprFieldValue|CurField|Target|CurTable)'
+      scope: variable.language.vip
+
+    - match: '\b((string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant)?\b)'
+      scope: storage.type.vip
+
+    - match: <\=|>\=|\=|<|>|\!\=
+      scope: keyword.operator.comparison.vip
+
+    - match: '\b(and|or|xor|not)'
+      scope: keyword.operator.word.vip
+
+
+
