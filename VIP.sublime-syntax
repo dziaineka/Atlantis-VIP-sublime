@@ -83,14 +83,14 @@ contexts:
             0: punctuation.definition.string.end.vip
           pop: true
 
-    - match: "<<"
+    - match: '^<<'
       captures:
         0: punctuation.definition.string.begin.vip
       push:
         - meta_scope: string.quoted.single.vip
-        - match: "<<>>"
+        - match: '<<>>'
           scope: constant.character.escape.apostrophe.vip
-        - match: ">>"
+        - match: '>>$'
           captures:
             0: punctuation.definition.string.end.vip
           pop: true
