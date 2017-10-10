@@ -1,0 +1,6 @@
+<snippet>
+	<description>RunInterface(interfaceName: string, *args): word</description>
+	<content><![CDATA[RunInterface('${1:interfaceName}')]]></content>
+	<tabTrigger>RunInterface</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
