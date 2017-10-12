@@ -119,7 +119,6 @@ contexts:
     - match: '\b(and|or|xor|not)\b'
       scope: keyword.operator.word.vip
 
-    # - match: (?<=:)(\s*\w*)
-      # scope: support.type.vip
-
-
+    #don't work because sublime-syntax files don't support \K
+    - match: (?:^|\G)[^\(]*?:\h*\K\w+
+      scope: support.type.vip
