@@ -31,6 +31,8 @@
       { "trigger": "abort\t", "contents": "abort" },
       { "trigger": "exit\t", "contents": "exit" },
       { "trigger": "tsOk\t", "contents": "tsOk" },
+      { "trigger": "true\t", "contents": "true" },
+      { "trigger": "false\t", "contents": "false" },
 
       // события главного окна
       { "trigger": "cmDelOnProtect\tОбработка Delete на защищенном от записи поле",
