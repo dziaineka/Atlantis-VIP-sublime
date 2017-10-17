@@ -1,0 +1,8 @@
+<snippet>
+	<description>ObjInterface</description>
+	<content><![CDATA[ObjInterface ${1:Name};
+  ${2:// funcs description}
+end;]]></content>
+	<tabTrigger>ObjInterface</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

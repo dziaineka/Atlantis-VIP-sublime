@@ -1,0 +1,6 @@
+<snippet>
+	<description>ClearMarker - удаляет все элементы из маркера marker</description>
+	<content><![CDATA[ClearMarker(${1:someMarker})]]></content>
+	<tabTrigger>ClearMarker</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
