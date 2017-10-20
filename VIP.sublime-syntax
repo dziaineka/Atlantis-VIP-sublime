@@ -18,7 +18,10 @@ variables:
 
 contexts:
   main:
-    - match: \b(?i:(Global|exception|keepqueue|show|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fieldtitle|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|property|protect|prototype|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|show|at|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
+    - include: global
+
+  global:
+    - match: \b(?i:(global|exception|keepqueue|show|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fieldtitle|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|property|protect|prototype|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|show|at|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
       scope: keyword.control.vip
 
     - match: \b((?<!\.)(?i:(var)))\b
@@ -110,7 +113,11 @@ contexts:
     - match: \b(?i:(ExprFieldValue|CurField|Target|CurTable))
       scope: variable.language.vip
 
-    - match: (\b(?i:(array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant))\b(?!\())
+    - match: (?:\w+)(?:\s*:\s*)(\w+\s*);
+      captures:
+        1: support.type.vip
+
+    - match: (\b(?i:(s20|s50|s255|array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant))\b(?!\())
       scope: storage.type.vip
 
     - match: <\=|>\=|\=|<|>|\!\=
@@ -118,10 +125,6 @@ contexts:
 
     - match: '\b(?i:(and|or|xor|not))\b'
       scope: keyword.operator.word.vip
-
-    #don't work because sublime-syntax files don't support \K
-    - match: (?:^|\G)[^\(:{2}]*?:\h*\K\w+
-      scope: support.type.vip
 
     - match: \;
       scope: punctuation.terminator.vip
@@ -131,3 +134,8 @@ contexts:
 
     - match: \b(?i:(public|private|event|protected|final))
       scope: storage.modifier.vip
+
+    # TODO
+    # variable.function.vip
+
+
