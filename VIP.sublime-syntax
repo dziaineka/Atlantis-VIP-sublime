@@ -27,7 +27,7 @@ contexts:
     - match: \b((?<!\.)(?i:(var)))\b
       scope: keyword.control.vip
 
-    - match: ^\s*(#(?i:(component|include|declare|doc|end|ifdef|endif|define|ifndef)))\b
+    - match: ^\s*(#(?i:(component|else|include|declare|doc|end|ifdef|endif|define|ifndef)))\b
       scope: keyword.control.vip
 
     - match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)(\(.*?\))?;\s*(?=(?i:attribute|forward|external))
@@ -107,10 +107,10 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(true|false|tsOk|cmYes|YesNo|Confirmation|Warning|OkButton))\b'
+    - match: '\b(?i:(true|false|tsOk|cmYes|(?:Yes)?(?:No)?|Confirmation|(?:mf)?Warning|OkButton))\b'
       scope: constant.language.vip
 
-    - match: \b(?i:(ExprFieldValue|CurField|Target|CurTable))
+    - match: \b(?i:(ExprFieldValue|CurField|Target|CurTable|ZeroDate))
       scope: variable.language.vip
 
     - match: (?:\w+)(?:\s*:\s*)(\w+\s*);
