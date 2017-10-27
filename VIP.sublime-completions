@@ -34,6 +34,12 @@
       { "trigger": "true\t", "contents": "true" },
       { "trigger": "false\t", "contents": "false" },
 
+      { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
+      { "trigger": "CurField\t", "contents": "CurField" },
+      { "trigger": "Target\t", "contents": "Target" },
+      { "trigger": "CurTable\t", "contents": "CurTable" },
+      { "trigger": "ZeroDate\t", "contents": "ZeroDate" },
+
       // события главного окна
       { "trigger": "cmDelOnProtect\tОбработка Delete на защищенном от записи поле",
          "contents": "cmDelOnProtect" },
