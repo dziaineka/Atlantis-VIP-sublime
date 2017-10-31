@@ -11,6 +11,8 @@ file_extensions:
   - mnu
   - inc
   - gcd
+  - ccm
+  - csc
 scope: source.vip
 
 variables:
@@ -107,17 +109,17 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(true|false|tsOk|cmYes|(?:Yes)?(?:No)?|Confirmation|(?:mf)?Warning|OkButton))\b'
+    - match: '\b(?i:(ZeroDate|true|false|tsOk|cm(?:Yes|No)|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|Error|Information)|OkButton|(?:vf(?:NumericVisual|Timer|Break))|(?:vt(?:NumericVisual))))\b'
       scope: constant.language.vip
 
-    - match: \b(?i:(ExprFieldValue|CurField|Target|CurTable|ZeroDate))
+    - match: \b(?i:(ExprFieldValue|CurField|Target|CurTable))
       scope: variable.language.vip
 
     - match: (?:\w+)(?:\s*:\s*)(\w+\s*);
       captures:
         1: support.type.vip
 
-    - match: (\b(?i:(s20|s50|s255|array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant))\b(?!\())
+    - match: (\b(?i:(LVar|s20|s50|s255|array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant))\b(?!\())
       scope: storage.type.vip
 
     - match: <\=|>\=|\=|<|>|\!\=
