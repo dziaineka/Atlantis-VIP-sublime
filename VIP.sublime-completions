@@ -3,6 +3,23 @@
 
    "completions":
    [
+      { "trigger": "getfirst\t", "contents": "getfirst" },
+      { "trigger": "getnext\t", "contents": "getnext" },
+      { "trigger": "getprev\t", "contents": "getprev" },
+      { "trigger": "continue\t", "contents": "continue" },
+      { "trigger": "break\t", "contents": "break" },
+      { "trigger": "abort\t", "contents": "abort" },
+      { "trigger": "exit\t", "contents": "exit" },
+      { "trigger": "tsOk\t", "contents": "tsOk" },
+      { "trigger": "true\t", "contents": "true" },
+      { "trigger": "false\t", "contents": "false" },
+
+      { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
+      { "trigger": "CurField\t", "contents": "CurField" },
+      { "trigger": "Target\t", "contents": "Target" },
+      { "trigger": "CurTable\t", "contents": "CurTable" },
+      { "trigger": "ZeroDate\t", "contents": "ZeroDate" },
+
       { "trigger": "tPtr\t", "contents": "tPtr" },
       { "trigger": "tSumma\t", "contents": "tSumma" },
       { "trigger": "word\t2B 0-65535", "contents": "word" },
@@ -22,23 +39,6 @@
         "contents": "time" },
       { "trigger": "_DateTime\tобъединение структур date и time", "contents": "_DateTime" },
       { "trigger": "variant\t", "contents": "variant" },
-
-      { "trigger": "getfirst\t", "contents": "getfirst" },
-      { "trigger": "getnext\t", "contents": "getnext" },
-      { "trigger": "getprev\t", "contents": "getprev" },
-      { "trigger": "continue\t", "contents": "continue" },
-      { "trigger": "break\t", "contents": "break" },
-      { "trigger": "abort\t", "contents": "abort" },
-      { "trigger": "exit\t", "contents": "exit" },
-      { "trigger": "tsOk\t", "contents": "tsOk" },
-      { "trigger": "true\t", "contents": "true" },
-      { "trigger": "false\t", "contents": "false" },
-
-      { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
-      { "trigger": "CurField\t", "contents": "CurField" },
-      { "trigger": "Target\t", "contents": "Target" },
-      { "trigger": "CurTable\t", "contents": "CurTable" },
-      { "trigger": "ZeroDate\t", "contents": "ZeroDate" },
 
       // события главного окна
       { "trigger": "cmDelOnProtect\tОбработка Delete на защищенном от записи поле",
