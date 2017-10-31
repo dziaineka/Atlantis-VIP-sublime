@@ -18,4 +18,5 @@
   // As Richard Jordan suggested, this item
   // controls what scopes auto complete will be triggered in
   "auto_complete_selector": "source, text",
+  "rulers": [80],
 }
