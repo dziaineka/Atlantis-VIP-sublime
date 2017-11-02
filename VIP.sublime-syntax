@@ -15,9 +15,6 @@ file_extensions:
   - csc
 scope: source.vip
 
-variables:
-  identifier: '\b[[:alpha:]_][[:alnum:]_]*\b'
-
 contexts:
   main:
     - include: global
@@ -75,12 +72,19 @@ contexts:
             0: punctuation.definition.string.end.vip
           pop: true
 
-    - match: '(^[ \t]+)?(//|![^=])'
+    - match: '(^[ \t]+)?(//)'
       captures:
         1: punctuation.whitespace.comment.leading.vip
         2: punctuation.definition.comment.vip
       push:
         - meta_scope: comment.line.double-slash.vip.two
+        - match: \n
+          pop: true
+
+    - match: '^!'
+      scope: punctuation.definition.comment.vip
+      push:
+        - meta_scope: comment.line.exclamation-point.vip.two
         - match: \n
           pop: true
 
@@ -135,11 +139,76 @@ contexts:
     - match: \b((?<!\.)(?i:(var)))\b
       scope: keyword.control.vip
 
-    - match: ^\s*(#(?i:(component|else|include|declare|doc|end|ifdef|endif|define|ifndef)))\b
+    - match: ^\s*(#(?i:(component|else|declare|end|ifdef|endif|define|ifndef)))\b
       scope: keyword.control.vip
+
+    - match: ^\s*(#\s*(?:include))\b
+      captures:
+        1: keyword.control.include.vip
+      push:
+        - meta_scope: meta.preprocessor.include.vip
+        - include: preprocessor-line-continuation
+        - include: preprocessor-line-ending
+        - include: preprocessor-comments
+        - match: '"'
+          scope: punctuation.definition.string.begin.vip
+          push:
+            - meta_scope: string.quoted.double.include.vip
+            - match: '"'
+              scope: punctuation.definition.string.end.vip
+              pop: true
+
+    - match: ^\s*(#\s*(?:doc))\b
+      captures:
+        1: keyword.control.doc.vip
+      push:
+        - meta_scope: meta.preprocessor.doc.vip
+        - match: ^\s*(#\s*(?:end))\b
+          scope: keyword.control.doc.vip
+          pop: true
+
 
     - match: \b(?i:(global|exception|keepqueue|show|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|condition|constructor|const|continue|count|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fieldtitle|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|group|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|of|ole|onClose|onOpen|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|property|protect|prototype|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|show|at|size|skip|static|nostatic|statusCtx|statusLine|stdcache|struct|surrogate|synonym|tabbedSheet|tablestruct|tableEvent|table|text|then|toolbar|top|tree|type|unique|update|userSc|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
       scope: keyword.control.vip
 
+
+
+  preprocessor-line-continuation:
+    - match: '(\\)$\n'
+      captures:
+        1: punctuation.separator.continuation.vip
+    - match: \\(\s+?)$
+      captures:
+        1: invalid.illegal.space-after-continuation.vip
+
+  preprocessor-line-ending:
+    - match: $\n
+      pop: true
+
+
+  # Comment handling in preprocessor directives are complicated by the fact
+  # that a single-line comment will normally consume the newline to prevent
+  # completions from being presented to the user. Additionally, a multi-line
+  # comment without a line continuation ends at the newline.
+  preprocessor-comments:
+    - match: /\*
+      scope: punctuation.definition.comment.vip
+      push:
+        - meta_scope: comment.block.vip
+        - match: '\\$\n'
+          scope: punctuation.separator.continuation.vip
+        - match: \*/
+          scope: punctuation.definition.comment.vip
+          pop: true
+    - match: //
+      scope: punctuation.definition.comment.vip
+      push:
+        - meta_scope: comment.line.double-slash.vip
+        - match: '(\\)$\n'
+          captures:
+            1: punctuation.separator.continuation.vip
+          pop: true
+        - match: (?=\n)
+          pop: true
 
 
