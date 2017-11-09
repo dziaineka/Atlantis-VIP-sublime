@@ -115,7 +115,7 @@ contexts:
         1: support.type.vip
         2: keyword.control.vip
 
-    - match: (\b(?i:(LVar|s(?:1|20|50|60|255)|array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant|type\$\w+))\b(?!\())
+    - match: (\b(?i:(LVar|s(?:1|20|29|30|50|60|255)|array|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant|type\$\w+))\b(?!\())
       scope: storage.type.vip
 
     - match: <\=|>\=|\=|<|>|\!\=
