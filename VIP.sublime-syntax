@@ -122,7 +122,7 @@ contexts:
       scope: variable.language.vip
 
     # TODO
-    # - match: синонимы таблиц
+    # - match: синонимы таблиц (кажется, что не реализуемо)
     #   scope: variable.language.vip
 
     - match: (?'uservar'\w+)(?:\s*:\s*)(\w+\s*(?:\(\w+\))?)\s*(new)?;
@@ -130,6 +130,8 @@ contexts:
         2: support.type.vip
         3: keyword.control.vip
 
+    # вот эта вот мразь не работает, именованные группы не
+    # поддерживаются этой реализацией регэкспов, ради быстродействия, как я понимаю
     - match: ${uservar}
       scope: variable.language.vip
 

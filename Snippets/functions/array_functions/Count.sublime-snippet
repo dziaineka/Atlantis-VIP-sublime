@@ -1,0 +1,6 @@
+<snippet>
+	<description>Функция возвращает количество элементов в массиве</description>
+	<content><![CDATA[Count(${1:someArray})]]></content>
+	<tabTrigger>Count</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

@@ -6,6 +6,7 @@
       { "trigger": "getfirst\t", "contents": "getfirst" },
       { "trigger": "getnext\t", "contents": "getnext" },
       { "trigger": "getprev\t", "contents": "getprev" },
+      { "trigger": "noindex\t", "contents": "noindex" },
       { "trigger": "continue\t", "contents": "continue" },
       { "trigger": "break\t", "contents": "break" },
       { "trigger": "abort\t", "contents": "abort" },
@@ -15,6 +16,7 @@
       { "trigger": "false\t", "contents": "false" },
 
       { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
+      { "trigger": "OldFieldValue\t", "contents": "OldFieldValue" },
       { "trigger": "CurField\t", "contents": "CurField" },
       { "trigger": "Target\t", "contents": "Target" },
       { "trigger": "CurTable\t", "contents": "CurTable" },
