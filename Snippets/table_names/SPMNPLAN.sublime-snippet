@@ -1,0 +1,6 @@
+<snippet>
+    <description>SPMNPLAN - производственный план спецификация</description>
+    <content><![CDATA[SPMNPLAN]]></content>
+    <tabTrigger>SPMNPLAN</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

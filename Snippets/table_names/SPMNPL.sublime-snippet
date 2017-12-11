@@ -1,0 +1,6 @@
+<snippet>
+    <description>SPMNPL</description>
+    <content><![CDATA[SPMNPL]]></content>
+    <tabTrigger>SPMNPL</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
