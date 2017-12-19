@@ -1,0 +1,6 @@
+<snippet>
+	<description>Получение подстроки из строки</description>
+	<content><![CDATA[SubStr(${1:someString}, ${2:position}, ${3:length})]]></content>
+	<tabTrigger>SubStr</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

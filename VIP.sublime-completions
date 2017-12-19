@@ -14,6 +14,11 @@
       { "trigger": "tsOk\t", "contents": "tsOk" },
       { "trigger": "true\t", "contents": "true" },
       { "trigger": "false\t", "contents": "false" },
+      { "trigger": "insert\t", "contents": "insert" },
+      { "trigger": "update\t", "contents": "update" },
+      { "trigger": "delete\t", "contents": "delete" },
+      { "trigger": "current\t", "contents": "current" },
+      { "trigger": "NREC\t", "contents": "NREC" },
 
       { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
       { "trigger": "OldFieldValue\t", "contents": "OldFieldValue" },

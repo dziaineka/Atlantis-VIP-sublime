@@ -1,0 +1,6 @@
+<snippet>
+    <description>Количество записей в таблице</description>
+    <content><![CDATA[RecordsInTable(tn${1:TABLENAME})]]></content>
+    <tabTrigger>RecordsInTable</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
