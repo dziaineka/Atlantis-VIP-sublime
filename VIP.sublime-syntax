@@ -110,7 +110,7 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(NoButton|ZeroDate|true|false|tsOk|cm(?:Yes|No)|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|Error|Information)|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
+    - match: '\b(?i:(NoButton|ZeroDate|true|false|tsOk|cmcancel|cm(?:Yes|No)|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
       scope: constant.language.vip
 
     - match: (?i:#)\w+\.\w+
@@ -135,7 +135,8 @@ contexts:
         3: keyword.control.vip
 
     # вот эта вот мразь не работает, именованные группы не
-    # поддерживаются этой реализацией регэкспов, ради быстродействия, как я понимаю
+    # поддерживаются этой реализацией регулярных выражений,
+    # ради быстродействия, как я понимаю
     - match: ${uservar}
       scope: variable.language.vip
 
@@ -145,7 +146,7 @@ contexts:
     - match: <\=|>\=|\=|<|>|\!\=
       scope: keyword.operator.comparison.vip
 
-    - match: '\b(?i:(and|or|xor|not))\b'
+    - match: '\b(?i:(and|or|shr|Shl|xor|not))\b'
       scope: keyword.operator.word.vip
 
     - match: \;
