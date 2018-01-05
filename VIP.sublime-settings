@@ -19,4 +19,6 @@
   // controls what scopes auto complete will be triggered in
   "auto_complete_selector": "source, text",
   "rulers": [80],
+  "show_encoding": true,
+  "drag_text": false,
 }
