@@ -110,13 +110,13 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(NoButton|ZeroDate|true|false|tsOk|cmcancel|cm(?:Yes|No)|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
+    - match: '\b(?i:(NoButton|ZeroDate|true|false|tsOk|cm\w+|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
       scope: constant.language.vip
 
     - match: (?i:#)\w+\.\w+
       scope: variable.other.language.vip
 
-    - match: \b(?:{{table_names}})\.(?:\w+|\*)
+    - match: \b(?:\w+)\.(?:\w+|\*)
       scope: variable.other.language.vip
 
     - match: (?i:\bco|\btn|\#){{table_names}}\b
