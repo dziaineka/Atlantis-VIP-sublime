@@ -1,0 +1,13 @@
+<snippet>
+	<description>StartNewVisual</description>
+	<content><![CDATA[StartNewVisual(${1:vtIndicatorVisual},
+               ${2:vfTimer + vfBreak + vfConfirm},
+               '${3:Process description...}',
+               ${4:numberOfSteps});
+
+${5:// long-term process}
+
+StopVisual;]]></content>
+	<tabTrigger>StartNewVisual</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
