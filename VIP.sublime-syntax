@@ -110,7 +110,7 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(NoButton|ZeroDate|true|false|tsOk|cm\w+|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
+    - match: '\b(?i:(OnOpen|OnClose|NoButton|ZeroDate|true|false|tsOk|cm\w+|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
       scope: constant.language.vip
 
     - match: (?i:#)\w+\.\w+
@@ -122,20 +122,19 @@ contexts:
     - match: (?i:\bco|\btn|\#){{table_names}}\b
       scope: constant.language.vip
 
-    - match: \b(?i:(FirstDayRas|Cur_Date|ExprFieldValue|OldFieldValue|CurField|Target|CurTable))\b
+    - match: \b(?i:(FirstDayRas|Cur_Date|ExprFieldValue|acceptField|ViewField|SearchField|OldFieldValue|CurField|Target|CurTable))\b
       scope: variable.language.vip
 
     # TODO
     # - match: синонимы таблиц (кажется, что не реализуемо)
     #   scope: variable.language.vip
 
-    - match: (?'uservar'\w+)(?:\s*:\s*)(\w+\s*(?:\(\w+\))?)\s*(new)?;
+    - match: (?'uservar'\w+)(?:\s*:\s*)(\w+\s*(?:\(\w+\))?)\s*(new)?(?:\s*=\s*\w+.+\s*)?;
       captures:
         2: support.type.vip
         3: keyword.control.vip
 
-    # вот эта вот мразь не работает, именованные группы не
-    # поддерживаются этой реализацией регулярных выражений,
+    # именованные группы не поддерживаются этой реализацией регулярных выражений,
     # ради быстродействия, как я понимаю
     - match: ${uservar}
       scope: variable.language.vip
@@ -193,7 +192,7 @@ contexts:
           pop: true
 
 
-    - match: \b(?i:(of|table|struct|global|exception|keepqueue|show|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|acceptField|action|all|alter|alwaysOnTop|alwaysReturn|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|condition|constructor|const|continue|create|current|cyan|default|delete|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fieldtitle|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|ole|onClose|onOpen|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|property|protect|prototype|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|searchField|select|self|set|show|at|size|skip|static|nostatic|statusCtx|statusLine|stdcache|surrogate|synonym|tabbedSheet|tablestruct|windowevent|tableEvent|text|then|toolbar|top|tree|type|unique|update|userSc|viewField|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
+    - match: \b(?i:(of|table|struct|global|exception|keepqueue|show|_doFinally|_except|_finally|_loop|_noExcept|_raise|_reRaise|_retry|_skipFinally|_try|absolute|abstract|action|all|alter|alwaysOnTop|alwaysReturn|as|auto|backColor|begin|bevel|bitmap|blue|bold|bottom|bounds|break|browse|buttons|by|cacheable|cacheinfl|cartesian|case|cast|centered|center|checkEnter|color|command|condition|constructor|const|continue|create|current|cyan|default|delete|safe|deprecated|desc|destructor|dialog|div|doAccept|do|else|embedded|endfields|endform|endvar|end|escClose|eventNavigation|exit|abort|extensionPoint|external|external|fastfirstrow|fieldName|fieldtitle|fields|fixed_x|fixed_y|font|forward|backward|for|free|from|fullcache|getFirst|getNext|getLast|gray|handleEvent|handlerwithreplace|handler|help|if|image|implementation|implements|index|inherited|insert|interface|internal|into|is|italic|journal|left|licensed|like|linkform|list|locallock|memoID|menuItem|menu|modifier|mod|nameInList|new|noAutoSize|noauto|nocached|nocacheinfl|nocache|noindex|singleline|noprotect|spinbutton|noTableNavigation|nullRef|null|objInterface|objRef|ole|on|ordered|order|out|panel|DataStream|parameters|pickButton|nopickButton|property|protect|prototype|quickChoice|readonly|read|recMarker|recordExists|record|ref|reserved|restrict|result|right|rollback|root|screen|select|self|set|show|at|size|skip|static|nostatic|statusCtx|statusLine|stdcache|surrogate|synonym|tabbedSheet|tablestruct|windowevent|tableEvent|text|then|toolbar|top|tree|type|unique|update|userSc|viewTable|view|vipInterface|virtual|novisual|visual|web|where|while|window|with|write))\b
       scope: keyword.control.vip
 
 
