@@ -127,7 +127,7 @@ contexts:
     - match: (?i:\bco|\btn|\#){{table_names}}\b
       scope: constant.language.vip
 
-    - match: \b(?i:(FirstDayRas|Cur_Date|ExprFieldValue|acceptField|ViewField|SearchField|OldFieldValue|CurField|Target|CurTable))\b
+    - match: \b(?i:(FirstDayRas|Cur_Date|Cur_Time|ExprFieldValue|acceptField|ViewField|SearchField|OldFieldValue|CurField|Target|CurTable))\b
       scope: variable.language.vip
 
     # TODO
@@ -144,7 +144,7 @@ contexts:
     - match: ${uservar}
       scope: variable.language.vip
 
-    - match: (\b(?i:(tNRec(?:_x\d+)?|LVar|s\d+|array|\s*\[[A-Za-z0-9]+\.\.[A-Za-z0-9]+\]\s+of|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant|type\$\w+))\b(?!\())
+    - match: (\b(?i:(tNRec(?:_x\d+)?|LVar|s\d+|array|\s*\[[A-Za-z0-9]+\.\.[A-Za-z0-9]+\]\s+of|file|string|boolean|tPtr|tSumma|word|longint|integer|byte|comp|double|single|decimal|boolean|char|string|date|time|_DateTime|variant|type\$\w+))\b(?!\())
       scope: storage.type.vip
 
     - match: <\=|>\=|\=|<|>|\!\=
