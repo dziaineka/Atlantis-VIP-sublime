@@ -33,12 +33,6 @@ contexts:
       captures:
         1: storage.type.function.vip
         2: entity.name.function.vip
-        3: storage.type.parameter.vip
-
-    - match: \b(?:\s*\w+\s*\:)(?:(\s*\w+\s*)(\;|,)??\s*)
-      scope: meta.function.vip
-      captures:
-        1: storage.type.parameter.vip
 
     - match: '\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(h|b|H|B|L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\b'
       scope: constant.numeric.vip
@@ -134,7 +128,7 @@ contexts:
     # - match: синонимы таблиц (кажется, что не реализуемо)
     #   scope: variable.language.vip
 
-    - match: (?'uservar'\w+)(?:\s*:\s*)(\w+\s*(?:\(\w+\))?)\s*(new)?(?:\s*=\s*\w+.+\s*)?;
+    - match: (?'uservar'\w+)(?:\s*:\s*)(\w+\s*(?:\(\w+\))?)\s*(new)?(?:\s*=\s*\w+.+\s*)?(;|,)
       captures:
         2: support.type.vip
         3: keyword.control.vip
