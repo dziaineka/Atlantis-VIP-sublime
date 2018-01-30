@@ -109,7 +109,10 @@ contexts:
     - match: ((?<!\.)(\+|-|/|\*))
       scope: keyword.operator.arithmetic.vip
 
-    - match: '\b(?i:(OnOpen|OnClose|NoButton|ZeroDate|ZeroTime|ZeroDateTime|true|false|tsOk|cm\w+|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
+    - match: '\b(?i:(OnOpen|OnClose|NoButton|ZeroDate|ZeroTime|ZeroDateTime|true|false|tsOk|(?:mf)?(?:Yes)?(?:No)?(?:Cancel)?|Confirmation|(?:mf)?(?:Warning|TextWithIndent|SwapButtons|Error|Information)|cancelButton|OkButton|(?:vf(?:NumericVisual|Timer|Break|Confirm|Silent|ScreenBottom|Thread))|(?:vt(?:NumericVisual|IndicatorVisual|RotateVisual))))\b'
+      scope: constant.language.vip
+
+    - match: '\b(?:(cm\w+))\b'
       scope: constant.language.vip
 
     - match: (?i:#)\w+\.\w+
