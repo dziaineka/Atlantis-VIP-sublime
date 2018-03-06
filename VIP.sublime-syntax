@@ -180,12 +180,12 @@ contexts:
               scope: punctuation.definition.string.end.vip
               pop: true
 
-    - match: ^\s*(#\s*(?:doc))\b
+    - match: ^\s*(#\s*(?i:doc))\b
       captures:
         1: keyword.control.doc.vip
       push:
         - meta_scope: meta.preprocessor.doc.vip
-        - match: ^\s*(#\s*(?:end))\b
+        - match: ^\s*(#\s*(?i:end))\b
           scope: keyword.control.doc.vip
           pop: true
 
