@@ -1,0 +1,6 @@
+<snippet>
+	<description>cfsSetProp(elementName: string|longint; propertyName: string|longint; value: anytype): longint;</description>
+	<content><![CDATA[cfsSetProp(${1:elementName}, ${2:propertyName}, ${3:value})]]></content>
+	<tabTrigger>cfsSetProp</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
