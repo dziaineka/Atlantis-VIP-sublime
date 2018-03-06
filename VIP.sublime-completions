@@ -19,6 +19,8 @@
       { "trigger": "delete\t", "contents": "delete" },
       { "trigger": "current\t", "contents": "current" },
       { "trigger": "NREC\t", "contents": "NREC" },
+      { "trigger": "public\t", "contents": "public" },
+      { "trigger": "private\t", "contents": "private" },
 
       { "trigger": "ExprFieldValue\t", "contents": "ExprFieldValue" },
       { "trigger": "OldFieldValue\t", "contents": "OldFieldValue" },
