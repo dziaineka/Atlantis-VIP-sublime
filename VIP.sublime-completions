@@ -18,7 +18,7 @@
       { "trigger": "update\t", "contents": "update" },
       { "trigger": "delete\t", "contents": "delete" },
       { "trigger": "current\t", "contents": "current" },
-      { "trigger": "NREC\t", "contents": "NREC" },
+      { "trigger": "NRec\t", "contents": "NREC" },
       { "trigger": "public\t", "contents": "public" },
       { "trigger": "private\t", "contents": "private" },
 
@@ -31,6 +31,7 @@
 
       { "trigger": "tPtr\t", "contents": "tPtr" },
       { "trigger": "tSumma\t", "contents": "tSumma" },
+      { "trigger": "tNRec\t", "contents": "tNRec" },
       { "trigger": "word\t2B 0-65535", "contents": "word" },
       { "trigger": "longint\t4B -2147483648 — 2147483647", "contents": "longint" },
       { "trigger": "integer\t2B -32768 — 32767", "contents": "integer" },
@@ -48,178 +49,5 @@
         "contents": "time" },
       { "trigger": "_DateTime\tобъединение структур date и time", "contents": "_DateTime" },
       { "trigger": "variant\t", "contents": "variant" },
-
-      // события главного окна
-      { "trigger": "cmDelOnProtect\tОбработка Delete на защищенном от записи поле",
-         "contents": "cmDelOnProtect" },
-
-      { "trigger": "cmOnVipLoad\tСоздание экземпляра Vip-интерфейса",
-         "contents": "cmOnVipLoad" },
-
-      { "trigger": "cmOnVipUnload\tОсвобождение экземпляра Vip-интерфейса",
-         "contents": "cmOnVipUnload" },
-
-      { "trigger": "cmPick\tВызвать окно выбора",
-         "contents": "cmPick" },
-
-      { "trigger": "cmPosDown\tПерейти к следующей записи",
-         "contents": "cmPosDown" },
-
-      { "trigger": "cmPosUp\tПерейти к предыдущей записи",
-         "contents": "cmPosUp" },
-
-      { "trigger": "cmProtectedInput\tПопытка редактировать защищенную от ввода запись",
-         "contents": "cmProtectedInput" },
-
-      { "trigger": "cmSetCurField\tПопытка редактировать защищенную от ввода запись",
-         "contents": "cmSetCurField" },
-
-      { "trigger": "cmSetCurTable\tУстановить текущую корневую таблицу",
-         "contents": "cmSetCurTable" },
-
-      { "trigger": "cmSwitchFormat\tНотификация перехода фокуса между форматами",
-         "contents": "cmSwitchFormat" },
-
-      { "trigger": "cmSwitchFromContainer\tНотификация перехода фокуса между форматами",
-         "contents": "cmSwitchFromContainer" },
-
-      { "trigger": "cmSwitchToContainer\tНотификация перехода фокуса между форматами",
-         "contents": "cmSwitchToContainer" },
-
-      { "trigger": "cmUserConflict\tПассивная блокировка",
-         "contents": "cmUserConflict" },
-
-      // события табличные
-
-      { "trigger": "cmAbortInsert\tОтказ от изменения",
-         "contents": "cmAbortInsert" },
-
-      { "trigger": "cmCheckField\tПроверить корректность поля",
-         "contents": "cmCheckField" },
-
-      { "trigger": "cmCheckRecord\tПроверить корректность записи",
-         "contents": "cmCheckRecord" },
-
-      { "trigger": "cmColumnClicked\tЩелчок на колонке",
-         "contents": "cmColumnClicked" },
-
-      { "trigger": "cmDeleteRecord\tУдалить запись",
-         "contents": "cmDeleteRecord" },
-
-      { "trigger": "cmDoFind\tНайти запись",
-         "contents": "cmDoFind" },
-
-      { "trigger": "cmDoGetLast\tПерейти на последнюю запись",
-         "contents": "cmDoGetLast" },
-
-      { "trigger": "cmDoGetNext\tПерейти на следующую запись",
-         "contents": "cmDoGetNext" },
-
-      { "trigger": "cmDoGetFirst\tПерейти на первую запись",
-         "contents": "cmDoGetFirst" },
-
-      { "trigger": "cmDoGetPrev\tПерейти на предыдущую запись",
-         "contents": "cmDoGetPrev" },
-
-      { "trigger": "cmExprFieldChanged\tИзменить вычисляемое поле",
-         "contents": "cmExprFieldChanged" },
-
-      { "trigger": "cmFormatError\tОшибка формата вводимых данных",
-         "contents": "cmFormatError" },
-
-      { "trigger": "cmGetAddr\tПолучить адрес записи",
-         "contents": "cmGetAddr" },
-
-      { "trigger": "cmGetDirect\tПерейти на запись по адресу",
-         "contents": "cmGetDirect" },
-
-      { "trigger": "cmIdle\tПустой цикл обработки",
-         "contents": "cmIdle" },
-
-      { "trigger": "cmImportMemo\tИмпортировать мемо-поле из файла",
-         "contents": "cmImportMemo" },
-
-      { "trigger": "cmInsertRecord\tВставить запись",
-         "contents": "cmInsertRecord" },
-
-      { "trigger": "cmManualHScrollFirst\tПерейти к первой колонке",
-         "contents": "cmManualHScrollFirst" },
-
-      { "trigger": "cmManualHScrollPageNext\tПерейти на страницу вперед",
-         "contents": "cmManualHScrollPageNext" },
-
-      { "trigger": "cmManualHScrollPagePrev\tПерейти на страницу назад",
-         "contents": "cmManualHScrollPagePrev" },
-
-      { "trigger": "cmManualHScrollLast\tПерейти на последнюю колонку",
-         "contents": "cmManualHScrollLast" },
-
-      { "trigger": "cmManualHScrollNext\tПерейти к следующей колонке",
-         "contents": "cmManualHScrollNext" },
-
-      { "trigger": "cmManualHScrollPrev\tПерейти к предыдущей колонке",
-         "contents": "cmManualHScrollPrev" },
-
-      { "trigger": "cmPass\tОткрыть окно перехода",
-         "contents": "cmPass" },
-
-      { "trigger": "cmPositionChanged\tИзменить текущую запись в корневой таблице",
-         "contents": "cmPositionChanged" },
-
-      { "trigger": "cmSetDefault\tЗадать значения по умолчанию",
-         "contents": "cmSetDefault" },
-
-      { "trigger": "cmTreeCloseNode\tЗакрыть узел",
-         "contents": "cmTreeCloseNode" },
-
-      { "trigger": "cmTreeDown\tПерейти вниз по дереву",
-         "contents": "cmTreeDown" },
-
-      { "trigger": "cmTreeNeedOwner\tРекурсивный обход дерева",
-         "contents": "cmTreeNeedOwner" },
-
-      { "trigger": "cmTreeOpenNode\tОткрыть узел",
-         "contents": "cmTreeOpenNode" },
-
-      { "trigger": "cmTreeNodeType\tУстановить тип узла",
-         "contents": "cmTreeNodeType" },
-
-      { "trigger": "cmTreeTop\tПерейти в корень дерева",
-         "contents": "cmTreeTop" },
-
-      { "trigger": "cmTreeUp\tПерейти вверх по дереву",
-         "contents": "cmTreeUp" },
-
-      { "trigger": "cmUpdateRecord\tМодифицировать запись",
-         "contents": "cmUpdateRecord" },
-
-      // события оконные
-
-      { "trigger": "cmChangeTabbedSheetFormat\tПереход между",
-         "contents": "cmChangeTabbedSheetFormat" },
-
-      { "trigger": "cmDefault\tНажатие ввода в диалоговом окне или интерфейсе",
-         "contents": "cmDefault" },
-
-      { "trigger": "cmDelete\tУдалить",
-         "contents": "cmDelete" },
-
-      { "trigger": "cmDone\tОсвободить",
-         "contents": "cmDone" },
-
-      { "trigger": "cmHotKeys\tОбработать нажатие клавиши Menu",
-         "contents": "cmHotKeys" },
-
-      { "trigger": "cmInit\tПроинициализировать окно",
-         "contents": "cmInit" },
-
-      { "trigger": "cmInsert\tВставить",
-         "contents": "cmInsert" },
-
-      { "trigger": "cmOpenSearch\tОткрыть поиск",
-         "contents": "cmOpenSearch" },
-
-      { "trigger": "cmTreeInsLevel\tВставить на уровень ниже",
-         "contents": "cmTreeInsLevel" },
    ]
 }
