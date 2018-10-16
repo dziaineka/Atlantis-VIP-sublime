@@ -1,0 +1,6 @@
+<snippet>
+    <description>Функция добавляет баунд не снимая предыдущие</description>
+    <content><![CDATA[AddBounds(tb${1:BoundId})]]></content>
+    <tabTrigger>AddBounds</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

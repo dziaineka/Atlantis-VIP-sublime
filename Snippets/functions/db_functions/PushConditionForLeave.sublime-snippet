@@ -1,0 +1,6 @@
+<snippet>
+	<description>Активирует в узле TableName логической таблицы условие ConditionId.</description>
+	<content><![CDATA[PushConditionForLeave(tc${1:ConditionId}, #${2:TableName})]]></content>
+	<tabTrigger>PushConditionForLeave</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+	<description>Возвращает истину, если в узле активно условие ConditionId.</description>
+	<content><![CDATA[ConditionActiveInLeave(tc${1:ConditionId}, #${2:TableName})]]></content>
+	<tabTrigger>ConditionActiveInLeave</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

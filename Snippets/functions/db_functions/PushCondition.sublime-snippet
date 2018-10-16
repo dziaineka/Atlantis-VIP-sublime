@@ -1,0 +1,6 @@
+<snippet>
+    <description>Процедура делает активным условие ConditionId.</description>
+    <content><![CDATA[PushCondition(tc${1:ConditionId})]]></content>
+    <tabTrigger>PushCondition</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

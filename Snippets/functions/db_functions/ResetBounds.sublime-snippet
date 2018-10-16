@@ -1,0 +1,6 @@
+<snippet>
+	<description>Процедура снимает ограничения таблицы TABLENAME. Стек не ведется.</description>
+	<content><![CDATA[ResetBounds(#${1:TABLENAME})]]></content>
+	<tabTrigger>ResetBounds</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

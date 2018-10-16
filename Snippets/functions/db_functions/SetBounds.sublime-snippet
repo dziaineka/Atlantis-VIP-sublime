@@ -1,0 +1,6 @@
+<snippet>
+	<description>Процедура восстанавливает запомненные процедурой SetBounds.</description>
+	<content><![CDATA[SetBounds(#${1:TABLENAME})]]></content>
+	<tabTrigger>SetBounds</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

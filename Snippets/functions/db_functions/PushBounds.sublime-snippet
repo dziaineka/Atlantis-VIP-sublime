@@ -1,5 +1,5 @@
 <snippet>
-    <description>Функция устанавливает баунд</description>
+    <description>Функция устанавливает баунд снимая все предыдущие ограничения</description>
     <content><![CDATA[PushBounds(tb${1:BoundId})]]></content>
     <tabTrigger>PushBounds</tabTrigger>
     <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
