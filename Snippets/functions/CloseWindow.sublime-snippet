@@ -1,0 +1,6 @@
+<snippet>
+	<description>CloseWindow(iWindow: integer): boolean;</description>
+	<content><![CDATA[CloseWindow(${1:someWindow})]]></content>
+	<tabTrigger>CloseWindow</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>

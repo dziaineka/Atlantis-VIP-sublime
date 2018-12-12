@@ -1,0 +1,6 @@
+<snippet>
+	<description>CloseWindowEx(iWindow: integer; command: word): boolean;</description>
+	<content><![CDATA[CloseWindowEx(${1:someWindow}, cm${2:Default})]]></content>
+	<tabTrigger>CloseWindowEx</tabTrigger>
+    <scope>source.vip, source.vpp, source.vih, source.vil, source.obj</scope>
+</snippet>
